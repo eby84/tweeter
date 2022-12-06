@@ -6,17 +6,23 @@
 nav {
   display:flex;
   height: 120px;
+  width: 100%;
   background-color:#4056A1;
   color: #FFFFFF;
   padding: 1.5em;
+  align-items: center;
   justify-content: space-between;
-  
+ position:fixed;
+ top: 0;
+ margin: 0;
+ left:0;
 
 }
 
 
 nav > span {
   font-family: 'Bungee', sans-serif;
+
 }
 
 .right-nav {
@@ -25,3 +31,4 @@ nav > span {
   justify-content: center;
   align-items:center;
 }
+

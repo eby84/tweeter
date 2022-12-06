@@ -19,6 +19,7 @@ body {
   background-color: #f4f1ec;
   font-size: 32px;
   font-family: 'Source Sans Pro', sans-serif;
+ 
 }
 
 
@@ -26,3 +27,13 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+ .container {
+  display: flex;
+  justify-content: center;
+  align-items:stretch;
+  flex-direction: column;
+  background-color: #f4f1ec;
+  margin-left: 5%;
+  margin-right: 5%;
+ }
