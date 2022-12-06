@@ -20,6 +20,8 @@
   <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
   <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
   <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+
 
   <!-- Font Awesome-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
@@ -50,7 +52,7 @@
     <div>
       <img src="/images/profile-hex.png">
     </div>
-    <br>
+    
     <div>
       <h2>Ebele Omanukwue</h2>
     </div>
@@ -58,9 +60,17 @@
 
   <!-- Page-specific (main) content here -->
   <main class="container">
-    <h4>If you haven't seen Game of Thrones, go watch it right now. If you have then you'll totally get why this Hodor themed lorem ipsum generator is just brilliant.</h4>
-    <p>Hodor. Hodor hodor, hodor. Hodor hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor; hodor hodor hodor. Hodor. Hodor hodor; hodor hodor - hodor, hodor, hodor hodor. Hodor, hodor. Hodor. Hodor, hodor hodor hodor; hodor hodor; hodor hodor hodor! Hodor hodor HODOR! Hodor hodor... Hodor hodor hodor...
-    </p>
+    <section class="new-tweet">
+      <form class="tweetSubmit" action="/tweets" method="POST">
+        
+        <textarea name="text" placeholder="What are you humming about?" id="tweet-text"></textarea>
+      
+        <div class="tweetButton">
+          <button type="submit">TWEET</button>
+          <output name="counter" class="counter" for="tweet-text">140</output>
+        </div>
+      </form>
+    </section>
   </main>
 </body>
 
