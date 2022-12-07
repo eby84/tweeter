@@ -1,18 +1,18 @@
-
-
-header {
-  display:flex;
+#profile {
+  display: flex;
   height: 400px;
-   margin-top: 100px;
-  background-color:darkgoldenrod;
-  justify-content: center;
+  width: 100%;
+  margin-top: 120px;
+  padding: 0px 0px;
+  background-color: darkgoldenrod;
+  justify-content: start;
   align-items: center;
   flex-direction: column;
   background-image: url("https://www.transparenttextures.com/patterns/use-your-illusion.png");
-  color:white;
+  color: white;
 }
 
-header > div > h2 {
-margin-top: 0px;
+header>div>h2 {
+  margin: 0px;
 
 }

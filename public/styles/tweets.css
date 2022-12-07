@@ -1,0 +1,85 @@
+.tweet-container {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  justify-content: space-between;
+
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5em;
+  margin: 10px 0px;
+  outline-style: solid;
+
+}
+
+article>header {
+  display: flex;
+  flex-direction: row;
+
+  align-items: flex-start;
+  align-content: center;
+  height: 3em;
+
+}
+
+.img-name {
+  display: flex;
+  flex-direction: row;
+
+}
+
+header>img {
+  height: 40px;
+
+}
+
+/* #Names{
+  display: flex;
+  justify-content: space-between;
+} */
+
+#name {
+
+  margin-left: 10px;
+  font-size: 21px;
+  padding-left: 0px;
+}
+
+
+#lastName {
+  color: rgb(79, 79, 136);
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-bottom: 2em;
+  font-size: 21px;
+
+}
+
+article:hover {
+  opacity: 2;
+  text-shadow: 0.2px 0.2px rgb(79, 79, 136);
+  box-shadow: 8px 8px rgb(170, 170, 214);
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 0px;
+  margin: 3%;
+  margin-top: 0;
+  font-family: Source Sans Pro, Sans-Serif;
+  font-size: 0.75em;
+  /* border-top: 5px black solid; */
+}
+
+.fa-solid:hover {
+  color: darkgoldenrod;
+}
+
+.fas:hover {
+  color: darkgoldenrod;
+}

@@ -31,8 +31,9 @@ body {
  .container {
   display: flex;
   justify-content: center;
-  align-items:stretch;
+  align-items:center;
   flex-direction: column;
+  display: block;
   background-color: #f4f1ec;
   margin-left: 5%;
   margin-right: 5%;

@@ -26,7 +26,7 @@ textarea {
   border-bottom: 5px solid rgb(18, 17, 17);
   background-color: #f4f1ec;
   resize: none;  
-  
+  outline: none;
 }
 
 
