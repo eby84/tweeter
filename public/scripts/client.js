@@ -9,21 +9,28 @@ $(() => {
     console.log(tweets);
   });
 
+  const escape = function(str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
   const createTweetElement = function(data) {
-    const $tweets = $(`<article class="tweets">
-  <header >
+    const $tweets = $(`
+    <article class="tweets">
+  <header>
     
     <div class="img-name">
-    <img src=${data.user.avatars}>
-    <div id="name">${data.user.name}</div>
+    <img src=${escape(data.user.avatars)}>
+    <div id="name">${escape(data.user.name)}</div>
   </div>
  
-  <div id="lastName">${data.user.handle}</div>
+  <div id="lastName">${escape(data.user.handle)}</div>
 
   </header>
-  <p class="tweet-text">${data.content.text}</p>
+  <p class="tweet-text" name="tweet-text">${escape(data.content.text)}</p>
   <footer>
-    <div>${timeago.format(data.created_at)}</div>
+    <div>${escape(timeago.format(data.created_at))}</div>
       <div class="image-class">
         <i class="fa-solid fa-flag"></i>
         <i class="fas fa-retweet"></i>
@@ -86,19 +93,14 @@ $(() => {
       alert("Tweet content is too long!");
       return;
     }
+    $form[0].reset();
     // make a post request to the server
     $.post('/tweets', data, (response) => {
       console.log(response);
       loadTweets();
     });
 
-
-
-
   });
-
-
-
 
 });
 

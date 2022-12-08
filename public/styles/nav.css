@@ -40,5 +40,7 @@ nav > span {
 }
 
 .drop-down {
-  animation: bounce 1s ease infinite;
+  animation: bounce 1s linear infinite;
+  color:red;
+  pointer-events: none;
 }

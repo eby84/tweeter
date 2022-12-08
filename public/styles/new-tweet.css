@@ -31,6 +31,7 @@ textarea {
 
 .tweet-text{
   border-bottom: 5px solid rgb(18, 17, 17);
+ word-wrap: break-word;
 }
 
 
