@@ -9,22 +9,21 @@ $(() => {
     console.log(tweets);
   });
 
-  const createTweetElement = function(tweets) {
+  const createTweetElement = function(data) {
     const $tweets = $(`<article class="tweets">
   <header >
     
     <div class="img-name">
-    <img src=${tweets.user.avatars}>
-    <div id="name">${tweets.user.name}</div>
+    <img src=${data.user.avatars}>
+    <div id="name">${data.user.name}</div>
   </div>
  
-  <div id="lastName">${tweets.user.handle}</div>
+  <div id="lastName">${data.user.handle}</div>
 
   </header>
-  <textarea name="text" placeholder=${tweets.content.text}
-    id="tweet-text"></textarea>
+  <p class="tweet-text">${data.content.text}</p>
   <footer>
-    <div>${tweets.created_at}</div>
+    <div>${timeago.format(data.created_at)}</div>
       <div class="image-class">
         <i class="fa-solid fa-flag"></i>
         <i class="fas fa-retweet"></i>
@@ -41,43 +40,32 @@ $(() => {
 
 
 
-  const data = [
-    {
-      "user": {
-        "name": "Newton",
-        "avatars": "https://i.imgur.com/73hZDYK.png"
-        ,
-        "handle": "@SirIsaac"
-      },
-      "content": {
-        "text": "If I have seen further it is by standing on the shoulders of giants"
-      },
-      "created_at": 1461116232227
-    },
-    {
-      "user": {
-        "name": "Descartes",
-        "avatars": "https://i.imgur.com/nlhLi3I.png",
-        "handle": "@rd"
-      },
-      "content": {
-        "text": "Je pense , donc je suis"
-      },
-      "created_at": 1461113959088
-    }
-  ];
 
 
-  const renderTweets = (tweets) => {
+
+  const renderTweets = (data) => {
+    $(".tweet-container").empty();
     //loop through the array
-    for (const tweet of tweets) {
+    for (const tweet of data) {
       const $tweets = createTweetElement(tweet);
       // append the $tweets to the DOM
-      $(".tweet-container").append($tweets);
+      $(".tweet-container").prepend($tweets);
     }
   };
 
-  renderTweets(data);
+  const loadTweets = () => {
+    $.ajax('/tweets', { method: 'GET' })
+      .then((tweets) => {
+        console.log("Tweets received!");
+        renderTweets(tweets);
+      })
+      .catch((err) => {
+        console.log("An error has occured!");
+      });
+  };
+  loadTweets();
+
+
 
 
   //form from index.html
@@ -91,7 +79,16 @@ $(() => {
     // make a post request to the server
     $.post('/tweets', data, (response) => {
       console.log(response);
-      
+      loadTweets();
     });
+
+
+
+
   });
+
+
+
+
 });
+

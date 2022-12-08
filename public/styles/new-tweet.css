@@ -29,7 +29,9 @@ textarea {
   outline: none;
 }
 
-
+.tweet-text{
+  border-bottom: 5px solid rgb(18, 17, 17);
+}
 
 
 .tweetButton {
