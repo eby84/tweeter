@@ -1,29 +1,20 @@
-.tweet-container {
+article{
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  justify-content: space-between;
+  outline-style: solid;
+  margin: 10px 0px;
+  padding: 0.5em;
+}
+
+header {
   display: flex;
   flex-direction: row;
-  margin-top: 20px;
   justify-content: space-between;
 
 }
 
-article {
-  display: flex;
-  flex-direction: column;
-  padding: 0.5em;
-  margin: 10px 0px;
-  outline-style: solid;
-
-}
-
-article>header {
-  display: flex;
-  flex-direction: row;
-
-  align-items: flex-start;
-  align-content: center;
-  height: 3em;
-
-}
 
 .img-name {
   display: flex;
@@ -36,10 +27,7 @@ header>img {
 
 }
 
-/* #Names{
-  display: flex;
-  justify-content: space-between;
-} */
+
 
 #name {
 
@@ -55,7 +43,7 @@ header>img {
   padding-left: 10px;
   padding-bottom: 2em;
   font-size: 21px;
-
+align-self: flex-end;
 }
 
 article:hover {
