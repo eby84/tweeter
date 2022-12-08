@@ -72,10 +72,20 @@ $(() => {
   $form = $(".tweetSubmit");
 
   $form.on('submit', (event) => {
+
     event.preventDefault();
+
     // get the data from the form (urlencoded data)
     const data = $form.serialize();
 
+    if (data.length === 5) {
+      alert("Tweet cannot be empty!");
+      return;
+    }
+    if (data.length > 145) {
+      alert("Tweet content is too long!");
+      return;
+    }
     // make a post request to the server
     $.post('/tweets', data, (response) => {
       console.log(response);
