@@ -79,18 +79,19 @@ $(() => {
   $form = $(".tweetSubmit");
 
   $form.on('submit', (event) => {
-
     event.preventDefault();
-
+    $('.errorText').slideUp(100).text('');
     // get the data from the form (urlencoded data)
     const data = $form.serialize();
 
     if (data.length === 5) {
-      alert("Tweet cannot be empty!");
+      $('.errorText').text('⚠ Tweet cannot be empty! Put in some words! ⚠').slideDown();
+      $('.errorText').css('border-style', 'solid');
       return;
     }
     if (data.length > 145) {
-      alert("Tweet content is too long!");
+      $('.errorText').text('⚠ Tweet content is too long! ⚠').slideDown();
+      $('.errorText').css('border-style', 'solid');
       return;
     }
     $form[0].reset();

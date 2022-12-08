@@ -27,6 +27,7 @@ textarea {
   background-color: #f4f1ec;
   resize: none;  
   outline: none;
+
 }
 
 .tweet-text{
@@ -46,4 +47,15 @@ textarea {
 background-color: rgb(41, 41, 183);
 color: #ffffff;
 font-weight: bold;
+}
+
+
+.errorText{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  color:red;
+  align-items: flex-start;
+padding-left: 0.5em;
+padding-right: 0.5em;
 }
