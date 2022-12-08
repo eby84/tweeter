@@ -4,11 +4,13 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 $(() => {
-  
 
+  $.get('/tweets', (tweets) => {
+    console.log(tweets);
+  });
 
-const createTweetElement = function(tweets){
-  const $tweets =  $(`<article class="tweets">
+  const createTweetElement = function(tweets) {
+    const $tweets = $(`<article class="tweets">
   <header >
     
     <div class="img-name">
@@ -33,46 +35,63 @@ const createTweetElement = function(tweets){
   </footer>
 
 </article>`);
-return $tweets;
-};
+    return $tweets;
+  };
 
 
 
 
-const data = [
-  {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png"
-      ,
-      "handle": "@SirIsaac"
+  const data = [
+    {
+      "user": {
+        "name": "Newton",
+        "avatars": "https://i.imgur.com/73hZDYK.png"
+        ,
+        "handle": "@SirIsaac"
+      },
+      "content": {
+        "text": "If I have seen further it is by standing on the shoulders of giants"
+      },
+      "created_at": 1461116232227
     },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1461116232227
-  },
-  {
-    "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd" },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "created_at": 1461113959088
-  }
-]
+    {
+      "user": {
+        "name": "Descartes",
+        "avatars": "https://i.imgur.com/nlhLi3I.png",
+        "handle": "@rd"
+      },
+      "content": {
+        "text": "Je pense , donc je suis"
+      },
+      "created_at": 1461113959088
+    }
+  ];
 
 
-const renderTweets = (tweets) => {
-  //loop through the array
-  for (const tweet of tweets) {
-    const $tweets = createTweetElement(tweet);
-// append the $tweets to the DOM
-$(".tweet-container").append($tweets);
-  }
-};
+  const renderTweets = (tweets) => {
+    //loop through the array
+    for (const tweet of tweets) {
+      const $tweets = createTweetElement(tweet);
+      // append the $tweets to the DOM
+      $(".tweet-container").append($tweets);
+    }
+  };
 
-renderTweets(data);
+  renderTweets(data);
+
+
+  //form from index.html
+  $form = $(".tweetSubmit");
+
+  $form.on('submit', (event) => {
+    event.preventDefault();
+    // get the data from the form (urlencoded data)
+    const data = $form.serialize();
+
+    // make a post request to the server
+    $.post('/tweets', data, (response) => {
+      console.log(response);
+      
+    });
+  });
 });
