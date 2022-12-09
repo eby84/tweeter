@@ -1,33 +1,29 @@
-article{
+article {
   display: flex;
   flex-direction: column;
   margin-top: 30px;
   justify-content: space-between;
   outline-style: solid;
   margin: 10px 0px;
-  padding: 0.5em;
 }
 
 header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-
+  margin-top: 0.5em;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
 }
-
 
 .img-name {
   display: flex;
   flex-direction: row;
-
 }
 
 header>img {
   height: 40px;
-
 }
-
-
 
 #name {
 
@@ -36,14 +32,13 @@ header>img {
   padding-left: 0px;
 }
 
-
 #lastName {
   color: rgb(79, 79, 136);
   padding-right: 10px;
   padding-left: 10px;
   padding-bottom: 2em;
   font-size: 21px;
-align-self: flex-end;
+  align-self: flex-end;
 }
 
 article:hover {

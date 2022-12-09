@@ -1,9 +1,9 @@
 form {
   display: flex;
   flex-direction: column;
+  margin-left: 0.2em;
+  margin-right: 0.2em;
 }
-
-
 
 .new-tweet {
   display:flex;
@@ -28,14 +28,15 @@ textarea {
   background-color: #f4f1ec;
   resize: none;  
   outline: none;
-
+  
 }
 
 .tweet-text{
   border-bottom: 5px solid rgb(18, 17, 17);
  word-wrap: break-word;
+ margin-left: 0.5em;
+ margin-right: 0.5em;
 }
-
 
 .tweetButton {
   display: flex;
@@ -48,8 +49,8 @@ textarea {
 background-color: rgb(41, 41, 183);
 color: #ffffff;
 font-weight: bold;
+cursor: pointer;
 }
-
 
 .errorText{
   display:flex;

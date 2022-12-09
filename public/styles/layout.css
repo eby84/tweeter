@@ -22,12 +22,9 @@ body {
  
 }
 
-
-
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
-
  .container {
   display: flex;
   justify-content: center;
@@ -42,17 +39,12 @@ body {
  /* Responsive design */
 @media screen and (max-width: 1024px) {
 body{
-  font-weight: bold;
+  font-weight: none;
 }
 body > header {
-margin-top: 80px;
+margin-top: 100px;
 }
-
-
-}
-
-
-
+  }
 
 @media screen and (min-width: 1024px) {
   body {
@@ -62,51 +54,15 @@ margin-top: 80px;
   }
   body > header {
     height: 100px ;
-    width: 23.3%;
+    width: 33.3%;
     line-height: 70px;
-    margin: 300px 100px 0px 3rem;
+    margin: 100px 50px 0px 2rem;
   }
-
   .container {
-    width: 70%;
+    width: 120%;
     float: right;
     margin: 150px 4rem 0px 50px;
   }
-
-  /* nav > header{
-    height:90px
-  } */
 }
 
 
-/* @media only screen and (min-width: 1024px) {
-  .hero {
-    width: 33.3%;
-    float: left;
-  }
-
-  .feature {
-    line-height: 300px;
-  }
-
-  .menu {
-    background-color: #111111;
-    color: #f0f0f0;
-    text-align: left;
-  }
-
-  .tagline {
-    display: inline;
-    font-style: italic;
-    font-weight: normal;
-    font-size: 12px;
-    color: tomato;
-    float: right;
-  }
-
-  .main {
-    max-width: 1024px;
-    font-size: 16px;
-    margin: 0 auto;
-  }
-} */

@@ -1,46 +1,46 @@
-
-
-
-
-
 nav {
-  display:flex;
+  display: flex;
   height: 120px;
   width: 100%;
-  background-color:#4056A1;
+  background-color: #4056A1;
   color: #FFFFFF;
   padding: 1.5em;
-  /* align-items: center; */
   justify-content: space-between;
- position:fixed;
- top: 0;
- margin: 0;
- left:0;
-
+  position: fixed;
+  top: 0;
+  margin: 0;
+  left: 0;
 }
-
 
 nav > span {
   font-family: 'Bungee', sans-serif;
-
 }
 
 .right-nav {
-  display:flex;
-  flex-direction:column;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items:center;
+  font-family: Source Sans Pro, sans-serif;
+  align-items: center;
+  cursor: pointer;
 }
 
 @keyframes bounce {
-  0%   { transform: scale(1,1) translateY(0); }
-  25%  { transform: scale(1.1) translateY(0); }
-  50%  { transform: scale(1.1)   translateY(-10px);}
- 
+  0% {
+    transform: scale(1, 1) translateY(0);
+  }
+
+  25% {
+    transform: scale(1.1) translateY(0);
+  }
+
+  50% {
+    transform: scale(1.1) translateY(-10px);
+  }
 }
 
 .drop-down {
   animation: bounce 1s linear infinite;
-  color:red;
+  color: red;
   pointer-events: none;
 }

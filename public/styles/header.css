@@ -1,28 +1,37 @@
 #profile {
   display: flex;
-  height: 350px;
+  height: 400px;
   width: 100%;
-  margin-top: 150px;
-  padding: 0px 0px;
+  margin-top: 200px;
+  padding: 15px 0px;
   background-color: darkgoldenrod;
   justify-content: start;
   align-items: center;
   flex-direction: column;
   background-image: url("https://www.transparenttextures.com/patterns/use-your-illusion.png");
   color: white;
+  /* margin-left:0px;
+  margin-right:0px; */
 }
 
 header>div>h2 {
   margin: 0px;
+}
 
+.image {
+  padding-top: 100px;
 }
 
 @media screen and (max-width: 1024px) {
-  
   #profile {
-  margin-top: 120px;
+    margin-top: 120px;
+    margin-left: 0px;
+    margin-right: 0px
   }
-  
-  
+
+  nav {
+    background-color: darkgoldenrod;
+    background-image: url("https://www.transparenttextures.com/patterns/use-your-illusion.png");
   }
-  
+
+}
