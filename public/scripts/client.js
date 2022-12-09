@@ -1,13 +1,7 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
+
 $(() => {
 
-  $.get('/tweets', (tweets) => {
-    console.log(tweets);
-  });
+  
 
   const escape = function(str) {
     let div = document.createElement("div");

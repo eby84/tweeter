@@ -38,3 +38,75 @@ body {
   margin-left: 5%;
   margin-right: 5%;
  }
+
+ /* Responsive design */
+@media screen and (max-width: 1024px) {
+body{
+  font-weight: bold;
+}
+body > header {
+margin-top: 80px;
+}
+
+
+}
+
+
+
+
+@media screen and (min-width: 1024px) {
+  body {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+  }
+  body > header {
+    height: 100px ;
+    width: 23.3%;
+    line-height: 70px;
+    margin: 300px 100px 0px 3rem;
+  }
+
+  .container {
+    width: 70%;
+    float: right;
+    margin: 150px 4rem 0px 50px;
+  }
+
+  /* nav > header{
+    height:90px
+  } */
+}
+
+
+/* @media only screen and (min-width: 1024px) {
+  .hero {
+    width: 33.3%;
+    float: left;
+  }
+
+  .feature {
+    line-height: 300px;
+  }
+
+  .menu {
+    background-color: #111111;
+    color: #f0f0f0;
+    text-align: left;
+  }
+
+  .tagline {
+    display: inline;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 12px;
+    color: tomato;
+    float: right;
+  }
+
+  .main {
+    max-width: 1024px;
+    font-size: 16px;
+    margin: 0 auto;
+  }
+} */
