@@ -51,6 +51,10 @@ $(document).ready(function() {
         renderTweets(tweets);
       });
   };
+  $('.right-nav').click(function(event) {
+    event.preventDefault();
+    $('#tweet-text').focus();
+  });
   loadTweets();
 
 
