@@ -1,8 +1,4 @@
-
-$(() => {
-
-  
-
+$(document).ready(function() {
   const escape = function(str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
@@ -38,12 +34,6 @@ $(() => {
     return $tweets;
   };
 
-
-
-
-
-
-
   const renderTweets = (data) => {
     $(".tweet-container").empty();
     //loop through the array
@@ -59,14 +49,9 @@ $(() => {
       .then((tweets) => {
         console.log("Tweets received!");
         renderTweets(tweets);
-      })
-      .catch((err) => {
-        console.log("An error has occured!");
       });
   };
   loadTweets();
-
-
 
 
   //form from index.html
@@ -88,11 +73,14 @@ $(() => {
       $('.errorText').css('border-style', 'solid');
       return;
     }
+
     $form[0].reset();
     // make a post request to the server
     $.post('/tweets', data, (response) => {
       console.log(response);
       loadTweets();
+      $('.counter').text('140');
+
     });
 
   });
