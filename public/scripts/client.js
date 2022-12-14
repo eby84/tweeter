@@ -67,12 +67,12 @@ $(document).ready(function() {
     // get the data from the form (urlencoded data)
     const data = $form.serialize();
 
-    if (data.length === 5) {
+    if (!$(this).children().find('textarea').val()) {
       $('.errorText').text('⚠ Tweet cannot be empty! Put in some words! ⚠').slideDown();
       $('.errorText').css('border-style', 'solid');
       return;
     }
-    if (data.length > 145) {
+    if ($(this).children().find('textarea').val().length > 140) {
       $('.errorText').text('⚠ Tweet content is too long! ⚠').slideDown();
       $('.errorText').css('border-style', 'solid');
       return;
